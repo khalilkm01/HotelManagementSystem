@@ -1,0 +1,120 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.5.4 (Azul Systems, Inc. Java 16.0.1)
+[debug]       Load.loadUnit: plugins took 80.387291ms
+[debug]       Load.loadUnit: defsScala took 0.148583ms
+[debug] [Loading] Scanning directory /Users/thegodfather/.sbt/1.0/plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /Users/thegodfather/.sbt/1.0/plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 17.855084 ms
+[debug]           Load.resolveProject(global-plugins) took 38.456833ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: /Users/thegodfather/.sbt/1.0/plugins, plugins: List(<none>))) took 73.312375ms
+[debug] [Loading] Done in /Users/thegodfather/.sbt/1.0/plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 109.055292ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.141666ms
+[debug]     Load.loadUnit(file:/Users/thegodfather/.sbt/1.0/plugins/, ...) took 198.798666ms
+[debug]   Load.apply: load took 752.180541ms
+[debug]   Load.apply: resolveProjects took 8.200375ms
+[debug]   Load.apply: finalTransforms took 70.139916ms
+[debug]   Load.apply: config.delegates took 33.934708ms
+[debug]   Load.apply: Def.make(settings)... took 354.728416ms
+[debug]   Load.apply: structureIndex took 66.758917ms
+[debug]   Load.apply: mkStreams took 0.863917ms
+[info] loading global plugins from /Users/thegodfather/.sbt/1.0/plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 3182.484292ms
+[debug]           Load.loadUnit: plugins took 14.338542ms
+[debug]           Load.loadUnit: defsScala took 0.002375ms
+[debug] [Loading] Scanning directory /Users/thegodfather/Documents/VSCODE/Scala/Playground/dir/project
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /Users/thegodfather/Documents/VSCODE/Scala/Playground/dir/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 1.259209 ms
+[debug]               Load.resolveProject(dir-build) took 1.405208ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id dir-build, base: /Users/thegodfather/Documents/VSCODE/Scala/Playground/dir/project, plugins: List(<none>))) took 3.365333ms
+[debug] [Loading] Done in /Users/thegodfather/Documents/VSCODE/Scala/Playground/dir/project, returning: (dir-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 5.250583ms
+[debug]           Load.loadUnit: cleanEvalClasses took 0.007334ms
+[debug]         Load.loadUnit(file:/Users/thegodfather/Documents/VSCODE/Scala/Playground/dir/project/, ...) took 20.039167ms
+[debug]       Load.apply: load took 21.020166ms
+[debug]       Load.apply: resolveProjects took 0.082708ms
+[debug]       Load.apply: finalTransforms took 5.442042ms
+[debug]       Load.apply: config.delegates took 0.284916ms
+[debug]       Load.apply: Def.make(settings)... took 82.08ms
+[debug]       Load.apply: structureIndex took 14.541334ms
+[debug]       Load.apply: mkStreams took 0.002041ms
+[info] loading project definition from /Users/thegodfather/Documents/VSCODE/Scala/Playground/dir/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 451.308917ms
+[debug]     Load.loadUnit: defsScala took 0.002958ms
+[debug] [Loading] Scanning directory /Users/thegodfather/Documents/VSCODE/Scala/Playground/dir
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /Users/thegodfather/Documents/VSCODE/Scala/Playground/dir, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 0.84925 ms
+[debug]         Load.resolveProject(dir) took 1.247708ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id dir, base: /Users/thegodfather/Documents/VSCODE/Scala/Playground/dir, plugins: List(<none>))) took 2.530291ms
+[debug] [Loading] Done in /Users/thegodfather/Documents/VSCODE/Scala/Playground/dir, returning: (dir)
+[debug]     Load.loadUnit: loadedProjectsRaw took 4.271625ms
+[debug]     Load.loadUnit: cleanEvalClasses took 0.01125ms
+[debug]   Load.loadUnit(file:/Users/thegodfather/Documents/VSCODE/Scala/Playground/dir/, ...) took 456.095417ms
+[debug] Load.apply: load took 457.281ms
+[debug] Load.apply: resolveProjects took 0.069417ms
+[debug] Load.apply: finalTransforms took 6.110166ms
+[debug] Load.apply: config.delegates took 0.252917ms
+[debug] Load.apply: Def.make(settings)... took 50.864959ms
+[debug] Load.apply: structureIndex took 15.472125ms
+[debug] Load.apply: mkStreams took 0.003667ms
+[info] set current project to dir (in build file:/Users/thegodfather/Documents/VSCODE/Scala/Playground/dir/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(shell, None, None)
+[warn] sbt server could not start because there's another instance of sbt running on this build.
+[warn] Running multiple instances is unsupported
