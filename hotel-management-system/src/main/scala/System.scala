@@ -24,6 +24,7 @@ Hotel is single bedroom for now
 */
 package management
 import scala.collection.mutable.Map
+import management.Indication.Success
 
 
 //Enumerations
@@ -60,7 +61,7 @@ class Hotel {
         
     }
     def calculatePrice(level: Level): Double = { 
-        status match {
+        level match {
             case Standard => 100
             case Business => 200
             case Executive => 300
@@ -69,10 +70,15 @@ class Hotel {
     }
 
     def checkRoomExistence(num : Int): Indication = {//Used before create room so that no errors
-        
+        if (getRoomNumbers.contains(num)) return Success
+        else return Failure
     }
 
-    def createRoom (number: Int, level: Int): Room = {
+    def createRoom (number: Int): Option[Room] = {//Used to create new rooms using the algorithm supplied   
+        checkRoomExistence(number) match {
+            case Success => return None
+            case Failure => return Some(Room(number, Empty,decideLevel(number), calculatePrice(decideLevel(n)), None))
+        }
         
     }
 
@@ -86,9 +92,9 @@ class Hotel {
 //Main object Hotel
 object Hotel {
 
-    //Room Management
+    //Room Variables
 
-    private var rooms : List[Room] = (1 to 10).map(n => Room(number = n, status = Empty, level = decideLevel(n), price = calculatePrice(decideLevel(n)), occupant = None))
+    private var rooms : List[Room] = (1 to 10).map(n => createRoom(n))
     private var roomNumbers : List[Int] = (1 to 10).map(n => n)
     private var checkedInRooms: List[Room] = rooms.filter(room => room.status == Occupied)
     private var checkedOutRooms: List[Room] = rooms.filter(room => room.status == Empty)
@@ -124,6 +130,7 @@ object Hotel {
     }
     
     def getRoomNumbers() : List[Int] = {//returns a list of the room numbers in the hotel
+        updateRoomNumbers()
         return roomNumbers
     }
 
@@ -135,7 +142,7 @@ object Hotel {
             roomCheckInLength = roomCheckInLength - room
             if (extend){
                 val originalTime = roomCheckInLength(room)
-                roomCheckInLength += (room ->(time + originalTime) )
+                roomCheckInLength += (room ->(originalTime + time) )
             } else {
                 roomCheckInLength += (room -> time)
             }
@@ -148,7 +155,7 @@ object Hotel {
     }
 
     def updateRoomNumbers () : Unit = {
-        var roomNumbers  = rooms.map(room => room.number)
+        roomNumbers  = rooms.map(room => room.number)
     }
 
     def updateRoomStatus(): Unit = {//Updates the room variables
@@ -171,7 +178,7 @@ object Hotel {
                 }
             } 
         }
-        updatedRoomStatus()
+        updateRoomStatus()
         if (roomAvailable){
             return Success
         } else{
@@ -192,7 +199,7 @@ object Hotel {
                 }
             } 
         }
-        updatedRoomStatus()
+        updateRoomStatus()
         if (checkedOut){
             return Success
         } else {
